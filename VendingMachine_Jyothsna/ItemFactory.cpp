@@ -1,5 +1,4 @@
 #include "pch.h"
-#include "ItemFactory.h"
 #include "ColaBeverage.h"
 #include "BarChocolate.h"
 #include "ChipsPacket.h"
