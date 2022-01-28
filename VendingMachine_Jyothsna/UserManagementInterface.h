@@ -1,9 +1,10 @@
 #pragma once
 #include "CategoryDef.h"
 
-class UserManagementSection
+class UserManagementInterface
 {
 public:
 	virtual bool manageUserActivity() = 0;
+	virtual ~UserManagementInterface() {}
 };
 

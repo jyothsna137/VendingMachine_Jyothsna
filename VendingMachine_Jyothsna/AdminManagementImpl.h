@@ -1,10 +1,10 @@
 #pragma once
-#include "UserManagementSection.h"
-class AdminManagement : public UserManagementSection
+#include "UserManagementInterface.h"
+class AdminManagementImpl final: public UserManagementInterface
 {
 public:
-	virtual bool manageUserActivity();
-	virtual ~AdminManagement();
+	virtual bool manageUserActivity() override;
+	virtual ~AdminManagementImpl();
 
 private:
 	bool checkAdminPassCode();

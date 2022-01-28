@@ -1,17 +1,17 @@
 #include "pch.h"
-#include "ColaBeverage.h"
-#include "BarChocolate.h"
-#include "ChipsPacket.h"
+#include "ColaBeverageImpl.h"
+#include "BarChocolateImpl.h"
+#include "ChipsPacketImpl.h"
 
-IItem* ItemFactory::getItemCategory(eItemCategoryHeader eItem) {
+ItemInterface* ItemFactory::getItemCategory(eItemCategoryHeader eItem) {
 	if (eItem == eItemCategoryHeader::BeverageCola) {
-		return new ColaBeverage();
+		return new ColaBeverageImpl();
 	}
 	else if (eItem == eItemCategoryHeader::ChocolateBar) {
-		return new BarChocolate();
+		return new BarChocolateImpl();
 	}
 	else if (eItem == eItemCategoryHeader::PackageChips) {
-		return new ChipsPacket();
+		return new ChipsPacketImpl();
 	}
 	return nullptr;
 }

@@ -1,14 +1,14 @@
 #include "pch.h"
 #include "UserFactory.h"
-#include "Admin.h"
-#include "Customer.h"
+#include "AdminImpl.h"
+#include "CustomerImpl.h"
 
-IUser* UserFactory::getUserCategory(eUserCategoryHeader eUser) {
-	if (eUser == eUserCategoryHeader::CustomerUser) {
-		return new Customer();
+AbstractUser* UserFactory::getUserCategory(eUserCategoryHeader enumUserType) {
+	if (enumUserType == eUserCategoryHeader::CustomerUser) {
+		return new CustomerImpl();
 	}
-	else if (eUser == eUserCategoryHeader::AdminUser) {
-		return new Admin();
+	else if (enumUserType == eUserCategoryHeader::AdminUser) {
+		return new AdminImpl();
 	}
 	return nullptr;
 }

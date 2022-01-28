@@ -21,22 +21,7 @@
     <ClInclude Include="ItemFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IItem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ColaBeverage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IUser.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Customer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Admin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="UserFactory.h">
@@ -45,19 +30,34 @@
     <ClInclude Include="CategoryDef.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BarChocolate.h">
+    <ClInclude Include="UserManagementInterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ChipsPacket.h">
+    <ClInclude Include="CustomerManagementImpl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="UserManagementSection.h">
+    <ClInclude Include="AdminManagementImpl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AdminManagement.h">
+    <ClInclude Include="AbstractUser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CustomerManagement.h">
+    <ClInclude Include="AdminImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BarChocolateImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChipsPacketImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ColaBeverageImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomerImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemInterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -74,10 +74,10 @@
     <ClCompile Include="UserFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AdminManagement.cpp">
+    <ClCompile Include="CustomerManagementImpl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CustomerManagement.cpp">
+    <ClCompile Include="AdminManagementImpl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

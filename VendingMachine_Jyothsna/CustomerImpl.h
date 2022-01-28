@@ -1,14 +1,14 @@
 #pragma once
-#include "IUser.h"
+#include "AbstractUser.h"
 #include <iostream>
 
 using namespace std;
 
-class Customer : public IUser
+class CustomerImpl final: public AbstractUser
 {
 public:
-	Customer(){}
-	virtual void performOperation(IItem *item) {
+	CustomerImpl(){}
+	virtual void performOperation(ItemInterface *item) override {
 		int quantity;
 		if (item == nullptr) { return; }
 
@@ -27,9 +27,9 @@ public:
 		cout << "Current Quantity:" << item->getItemCount() << endl;
 
 	}
-	virtual void setItemRole(eAdminRoleHeader ieRole) {
+	virtual void setItemRole(eAdminRoleHeader ieRole) override {
 		return;
 	}
-	virtual ~Customer(){}
+	virtual ~CustomerImpl(){}
 };
 

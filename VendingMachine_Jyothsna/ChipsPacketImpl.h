@@ -1,0 +1,24 @@
+#pragma once
+#include "ItemInterface.h"
+
+class ChipsPacketImpl final: public ItemInterface
+{
+public:
+	ChipsPacketImpl() {
+		m_iItemCount = 200;
+		m_dItemPrice = 30.00;
+	}
+	virtual int getItemCount() override {
+		return m_iItemCount;
+	}
+	virtual double getItemPrice() override {
+		return m_dItemPrice;
+	}
+	virtual void setItemCount(int itemCount) override {
+		m_iItemCount = itemCount;
+	}
+	virtual void setItemPrice(double itemPrice) override {
+		m_dItemPrice = itemPrice;
+	}
+	virtual ~ChipsPacketImpl() {}
+};

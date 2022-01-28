@@ -1,9 +1,9 @@
 #pragma once
 #include "CategoryDef.h"
-#include "IUser.h"
+#include "AbstractUser.h"
 class UserFactory
 {
 public:
-	static IUser* getUserCategory(eUserCategoryHeader eItem);
+	static AbstractUser* getUserCategory(eUserCategoryHeader enumUserType);
 };
 

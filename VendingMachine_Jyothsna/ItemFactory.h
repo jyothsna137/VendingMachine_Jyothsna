@@ -1,10 +1,10 @@
 #pragma once
 #include"CategoryDef.h"
-#include "IItem.h"
+#include "ItemInterface.h"
 
 class ItemFactory
 {
 public:
-	static IItem* getItemCategory(eItemCategoryHeader eItem);
+	static ItemInterface* getItemCategory(eItemCategoryHeader eItem);
 };
 

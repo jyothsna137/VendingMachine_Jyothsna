@@ -1,16 +1,16 @@
 #pragma once
-#include "IUser.h"
+#include "AbstractUser.h"
 #include "ItemFactory.h"
 #include <iostream>
 
 using namespace std;
 
-class Admin : public IUser
+class AdminImpl final: public AbstractUser
 {
 	eAdminRoleHeader eRole;
 public:
-	Admin(){}
-	virtual void performOperation(IItem *item) {
+	AdminImpl(){}
+	virtual void performOperation(ItemInterface *item) {
 
 		int quantity;
 		double price;
@@ -34,6 +34,6 @@ public:
 		eRole = ieRole;
 	}
 
-	virtual ~Admin(){}
+	virtual ~AdminImpl(){}
 };
 

@@ -151,25 +151,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Admin.h" />
-    <ClInclude Include="AdminManagement.h" />
-    <ClInclude Include="BarChocolate.h" />
-    <ClInclude Include="ChipsPacket.h" />
-    <ClInclude Include="ColaBeverage.h" />
-    <ClInclude Include="Customer.h" />
-    <ClInclude Include="CustomerManagement.h" />
-    <ClInclude Include="IItem.h" />
+    <ClInclude Include="AdminImpl.h" />
+    <ClInclude Include="AdminManagementImpl.h" />
+    <ClInclude Include="BarChocolateImpl.h" />
+    <ClInclude Include="ChipsPacketImpl.h" />
+    <ClInclude Include="ColaBeverageImpl.h" />
+    <ClInclude Include="CustomerImpl.h" />
+    <ClInclude Include="CustomerManagementImpl.h" />
+    <ClInclude Include="ItemInterface.h" />
     <ClInclude Include="CategoryDef.h" />
     <ClInclude Include="ItemFactory.h" />
-    <ClInclude Include="IUser.h" />
+    <ClInclude Include="AbstractUser.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="UserFactory.h" />
-    <ClInclude Include="UserManagementSection.h" />
+    <ClInclude Include="UserManagementInterface.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AdminManagement.cpp" />
-    <ClCompile Include="CustomerManagement.cpp" />
+    <ClCompile Include="AdminManagementImpl.cpp" />
+    <ClCompile Include="CustomerManagementImpl.cpp" />
     <ClCompile Include="ItemFactory.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

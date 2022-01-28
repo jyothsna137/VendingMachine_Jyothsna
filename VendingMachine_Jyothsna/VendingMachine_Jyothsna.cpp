@@ -2,38 +2,36 @@
 #include "pch.h"
 #include <iostream>
 #include <conio.h>
-#include "CustomerManagement.h"
-#include "AdminManagement.h"
+#include "CustomerManagementImpl.h"
+#include "AdminManagementImpl.h"
 
 using namespace std;
 
 int main()
 {
-	int userCategory;
-	UserManagementSection *userMgmt = nullptr;
+	int iUserCategory = -1;
+	unique_ptr<UserManagementInterface> sptrObjUserMgmt;
 	
-	cout << "Welcome to Star Vending Machine" << endl;
-	cout << "Please enter the following options" << endl;
+	cout << "******Welcome to Star Vending Machine!!!!******" << endl << endl;
+	cout << "Please enter an option from the following options:-" << endl << endl;
 	cout << "1. Customer " << endl <<"2. Admin "<<endl;
 	do{
-		cin >> userCategory;
-		if (userCategory == 1)
+		cin >> iUserCategory;
+		if (iUserCategory == 1)
 		{
-			userMgmt = new CustomerManagement();
+			sptrObjUserMgmt.reset(new CustomerManagementImpl());
 		}
-		else if (userCategory == 2) {
-			userMgmt = new AdminManagement();
+		else if (iUserCategory == 2) {
+			sptrObjUserMgmt.reset(new AdminManagementImpl());
 		}
 		else {
-			cout << "Enter a valid option" << endl;
+			cout << "Please enter a valid option" << endl;
 		}
-	} while ((userCategory < 1) || (userCategory > 2));
+	} while ((iUserCategory < 1) || (iUserCategory > 2));
 
-	if (nullptr != userMgmt) {
-		userMgmt->manageUserActivity();
-		delete userMgmt;
-	}
-	
+	if (nullptr != sptrObjUserMgmt) {
+		sptrObjUserMgmt.get()->manageUserActivity();
+	}	
 	_getch();
 	return 0;
 }
